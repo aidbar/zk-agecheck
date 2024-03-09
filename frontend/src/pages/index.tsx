@@ -9,7 +9,7 @@ import { zkProgram } from "@/components/zkProgram";
 import RestrictedWebsite, { MINIMUM_AGE } from "./website";
 
 const ORACLE_PUBLIC_KEY =
-  "B62qkN4f1prDvFexmhGHNsNz1db84XCA6vkgtJpcAaqFJk2M1runpLd";
+  "B62qr22wafj4oAmPFdshY8Bwya3cYMshuY5pGuSeuJzYLdZHwD4rK2G";
 
 enum ProofState {
   START,
