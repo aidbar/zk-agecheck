@@ -64,7 +64,7 @@ The project is deployed at https://zk-agecheck.vercel.app/ .
 
 The project utilizes Next.js. To run it locally:
 
-1. Generate a keypair: `ts-node keygen.ts`
+1. Generate a keypair: `ts-node keygen.ts` (if needed, install `ts-node` globally: `npm install -g ts-node`)
 1. Add file _.env.local_ with content: `ORACLE_PRIVATE_KEY="GENERATED_PRIVATE_KEY"`
 1. Change the public key in variable `ORACLE_PUBLIC_KEY` in _frontend/src/pages/index.tsx_
 1. Run `npm install`
