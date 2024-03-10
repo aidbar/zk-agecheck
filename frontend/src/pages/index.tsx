@@ -69,10 +69,10 @@ export default function Enter() {
       {proofState != ProofState.PROOF_VERIFYING && (
         <div className={styles.main} style={{ padding: 0 }}>
           <div className={styles.center} style={{ padding: 0 }}>
-            <p className="h1 text-primary p-3">ZK Age Verifier</p>
+            <p className="h1 text-primary text-center p-3">ZK Age Verifier</p>
             <p className="h3 text-danger text-center">{MINIMUM_AGE_TEXT_LABEL}</p>
             {proofState != ProofState.ERROR && (
-              <p className="h5 text-primary text-center p-3">Use a KYC provider to prove your age securely.</p>
+              <p className="h6 text-primary text-center font-italic p-3">Use a KYC provider to prove your age securely.</p>
             )}
             {proofState == ProofState.START && (
               <button
