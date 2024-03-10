@@ -26,6 +26,8 @@ export default function Enter() {
   const [proofState, setProofState] = useState<ProofState>(ProofState.START);
   const [errorText, setErrorText] = useState<string>("");
 
+  const MINIMUM_AGE_TEXT_LABEL = "You must be over " + MINIMUM_AGE + " years old to enter this site!"
+
   const setAgeData = async (ageData: SignedAgeData) => {
     if (ageData.age < MINIMUM_AGE) {
       setErrorText("Detected age is too low");
@@ -67,13 +69,14 @@ export default function Enter() {
       {proofState != ProofState.PROOF_VERIFYING && (
         <div className={styles.main} style={{ padding: 0 }}>
           <div className={styles.center} style={{ padding: 0 }}>
-            <p>You must be over 18 years old to enter this site! </p>
+            <p className="h1 text-primary p-3">ZK Age Verifier</p>
+            <p className="h3 text-danger text-center">{MINIMUM_AGE_TEXT_LABEL}</p>
             {proofState != ProofState.ERROR && (
-              <p>Use a KYC provider to prove your age securely.</p>
+              <p className="h5 text-primary text-center p-3">Use a KYC provider to prove your age securely.</p>
             )}
             {proofState == ProofState.START && (
               <button
-                className={styles.button}
+                type="button" className="btn btn-primary"
                 onClick={() => {
                   setProofState(ProofState.AT_KYC);
                 }}

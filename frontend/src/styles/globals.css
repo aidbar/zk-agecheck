@@ -1,4 +1,5 @@
-@font-face {
+@import url("https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css");
+/* @font-face {
   font-family: "ABC Monument Grotesk";
   font-style: normal;
   font-weight: normal;
@@ -47,3 +48,4 @@ a {
   color: inherit;
   text-decoration: none;
 }
+ */
